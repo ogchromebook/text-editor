@@ -16,7 +16,7 @@ app.use(express.json());
 
 // Serve the index.html file for the root URL
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+  res.sendFile(path.join(__dirname, '../client/index.html'));
 });
 
 // Start the server
