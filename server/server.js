@@ -4,7 +4,6 @@ const path = require('path'); // Built-in Node.js module to handle file paths
 const app = express();
 const PORT = process.env.PORT || 3000; // Use PORT from environment or default to 3000
 
-app.use(express.static('../client/dist'));
 // Serve static files from the client/dist directory
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
@@ -16,7 +15,7 @@ app.use(express.json());
 
 // Serve the index.html file for the root URL
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/index.html'));
+  res.sendFile(path.join(__dirname, '../client/dist/index.html'));
 });
 
 // Start the server
